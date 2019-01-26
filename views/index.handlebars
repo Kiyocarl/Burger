@@ -5,19 +5,23 @@
 <ul>
   {{#each burgers}}
     {{#unless hungry}}
-    not eaten
+    <li>
+    not eaten:{{burger/burger}}
       {{!-- {{>burgers/burger=true}} --}}
+      </li>
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>burgers that are delicious!</h2>
+<h2></h2>
 
 <ul>
   {{#each burger}}
     {{#if devoured}}
-    eaten
+    <li>
+    eaten: {{burger/burger}}
       {{!-- {{> burgers/burger=false}} --}}
+      </li>
     {{/if}}
 
     <button data-id="{{this.id}}" class="delquote">Delete</button>
